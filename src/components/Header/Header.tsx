@@ -1,20 +1,28 @@
-import React from 'react'
-import { StylesHeader } from './Header.styled'
+import React from "react";
+import { StylesHeader } from "./Header.styled";
+import { Search, ShoppingBag } from "lucide-react";
 
 function Header() {
   return (
     <StylesHeader>
+      <div className="content-header">
         <h1>InsanyShop</h1>
         <div className="header-actions-desktop">
-            <input type="text" />
-            <button className="cart-button">🛒</button>
+          <div>
+            <input type="text" placeholder="Procurando por algo específico?" />
+            <Search size={20} className="search" />
+          </div>
+          <div className="btn-container">
+            <ShoppingBag size={24} className="cart-button" />
+            <span className="circle">2</span>
+          </div>
         </div>
         <div className="header-actions-mobile">
-            <button>☰</button>
+          <button>☰</button>
         </div>
-       
+      </div>
     </StylesHeader>
-  )
+  );
 }
 
-export default Header
+export default Header;
