@@ -63,6 +63,9 @@ export const StylesHome = styled.div`
   }
 
   @media screen and (min-width: 992px) {
+       .content-section h1 {
+        font-size: 2.1rem;
+       }
     //Estilos para telas com no mínimo 992px
     .content-section .cards {
       grid-template-columns: repeat(

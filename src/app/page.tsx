@@ -1,5 +1,7 @@
 import ProductCard from "@/components/ProductCard/ProductCard";
 import { StylesHome } from "./page.styled";
+import Pagination from "@/components/Pagination/Pagination";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
           <ProductCard/>
           <ProductCard/>
         </div>
+        <Pagination/>
+        <Footer/>
       </div>
     </StylesHome>
   );
