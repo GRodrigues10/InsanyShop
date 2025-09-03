@@ -1,3 +1,4 @@
+// Isso é obrigatório
 import styled from "styled-components";
 // Mobile First - Começando o header para as telas mobile.
 export const StylesHeader = styled.header`

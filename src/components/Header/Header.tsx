@@ -1,7 +1,7 @@
-import React from "react";
-import { StylesHeader } from "./Header.styled";
+'use client'; // Isso é obrigatório
 import { Search, ShoppingBag } from "lucide-react";
 
+import { StylesHeader } from "./Header.styled";
 function Header() {
   return (
     <StylesHeader>

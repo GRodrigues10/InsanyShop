@@ -1,13 +1,20 @@
-'use client'
-
-import Header from "@/components/Header/Header";
-import { StylesPage } from "./page.styled";
-
+import ProductCard from "@/components/ProductCard/ProductCard";
+import { StylesHome } from "./page.styled";
 
 export default function Home() {
   return (
-    <StylesPage>
-        <Header/>
-    </StylesPage>
+    <StylesHome>
+      <div className="content-section">
+        <h1>Todos os Produtos</h1>
+        <div className="cards">
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+        </div>
+      </div>
+    </StylesHome>
   );
 }
