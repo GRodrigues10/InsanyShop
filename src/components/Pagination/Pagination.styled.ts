@@ -2,14 +2,13 @@
 import styled from "styled-components";
 // Estilos Globais do componente de Paginação.
 export const StylesPagination = styled.div`
- margin-top: 30px;
+  margin-top: 30px;
   width: 100%;
   .content-section {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-   
   }
 
   .pagination {
@@ -31,8 +30,12 @@ export const StylesPagination = styled.div`
     font-size: 16px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    &:hover{
+    &:hover {
       border: 1px solid;
     }
+  }
+
+  .selected{
+    border: 1px solid;
   }
 `;

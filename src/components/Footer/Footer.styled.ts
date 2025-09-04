@@ -1,5 +1,6 @@
 "use client";
 import styled from "styled-components";
+// Mobile First - Começando o footer para as telas mobile.
 
 export const StylesFooter = styled.footer`
   margin-top: 40px;

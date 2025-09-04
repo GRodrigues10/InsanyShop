@@ -16,6 +16,14 @@ export const StylesHome = styled.div`
     flex-direction: column;
   }
 
+  .loadind-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .content-section .cards {
     display: grid;
     grid-template-columns: 1fr; //A tela começa com 1 coluna de cards.

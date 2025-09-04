@@ -2,12 +2,18 @@ import Header from "@/components/Header/Header";
 import "./globals.css";
 import { StylesLayout } from "./layout.styled";
 import StyledComponentsRegistry from "../lib/registry"; // caminho correto para o seu registry
+import CategorySelect from "@/components/CategorySelect/CategorySelect";
+import SortSelect from "@/components/SortSelect/SortSelect";
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+   
+
+
   return (
     <html lang="pt-br">
       <body>
@@ -16,12 +22,8 @@ export default function RootLayout({
 
           <StylesLayout>
             <div className="content-section">
-              <select>
-                <option value="catergory">Selecione a categoria</option>
-              </select>
-              <select>
-                <option value="order">Ordenar por</option>
-              </select>
+             <CategorySelect/>
+            <SortSelect/>
             </div>
           </StylesLayout>
 

@@ -1,4 +1,3 @@
-// Isso é obrigatório
 import styled from "styled-components";
 // Mobile First - Começando o header para as telas mobile.
 export const StylesHeader = styled.header`
@@ -87,7 +86,7 @@ export const StylesHeader = styled.header`
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        transition: color 0.4s ease, transform 0.3s ease; /* cor e posição separadas */
+        transition: color 0.4s ease, transform 0.3s ease; 
         &:hover {
           color: #4a4a4a;
           transform: translateY(-55%);

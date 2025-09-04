@@ -1,35 +1,51 @@
 import React from "react";
 import { StylesProductCard } from "./ProductCard.styled";
 import { ShoppingCart } from "lucide-react";
+import { formatPrice } from "@/utils/format";
 
-function ProductCard() {
+// Tipagem dos produtos que está sendo recebido da API.
+interface Product {
+  image:string,
+  id: number;
+  category: string;
+  rating: number;
+  name: string;
+  description: string;
+  price: number;
+  stock: number;
+}
+// Criando o tipo Props para enviar o produto.
+interface Props {
+  product: Product;
+}
+
+export default function ProductCard({ product }: Props) {
   return (
     <StylesProductCard>
       <div className="content-section">
         <div className="product-card">
-          <img src="/img-test.png" alt="Imagem dos produtos" />
+          <img src={product.image} alt={product.name} />
           <div className="product-category">
-            <p>Roupas e Calçados</p>
+            <p>{product.category}</p>
             <p>
-              <span>★</span> 4,4
+              <span>★</span> {product.rating}
             </p>
           </div>
           <div className="product-description">
             <p>
-              <strong>Camiseta Básica Premium</strong>
+              <strong>{product.name}</strong>
             </p>
-            <p>Camisa 100% algodão com corte moderno e acabamento premium...</p>
+            <p>{product.description.slice(0, 59)}...</p>
           </div>
           <div className="product-info">
-            <h3>R$ 89,99</h3>
-            <p>50 em estoque</p>
+            <h3>R$ {formatPrice(product.price)}</h3>
+            <p>{product.stock} em estoque</p>
           </div>
           <div className="btn">
             <button>
               <span>
                 <ShoppingCart />
-              </span>{" "}
-              Adicionar
+              </span> Adicionar
             </button>
           </div>
         </div>
@@ -37,5 +53,3 @@ function ProductCard() {
     </StylesProductCard>
   );
 }
-
-export default ProductCard;
