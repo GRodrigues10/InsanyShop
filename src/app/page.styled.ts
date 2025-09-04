@@ -16,7 +16,7 @@ export const StylesHome = styled.div`
     flex-direction: column;
   }
 
-  .loadind-container{
+  .loadind-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -71,15 +71,16 @@ export const StylesHome = styled.div`
   }
 
   @media screen and (min-width: 992px) {
-       .content-section h1 {
-        font-size: 2.1rem;
-       }
+    .content-section h1 {
+      font-size: 2.1rem;
+    }
     //Estilos para telas com no mínimo 992px
     .content-section .cards {
       grid-template-columns: repeat(
         3,
         1fr
       ); // A tela passa a ter 3 colunas de cards.
+      gap: 5px;
     }
   }
 
