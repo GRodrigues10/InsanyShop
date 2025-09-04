@@ -47,3 +47,8 @@ export const fetchProductsByCategory = async (category: string) => {
       product.category.toLowerCase() === category.toLowerCase()
   );
 };
+
+export const fetchProductById = async (id: number) => {
+  const allProducts = await fetchProducts();
+  return allProducts.find((p: any) => p.id === id) || null;
+};

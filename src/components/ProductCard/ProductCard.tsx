@@ -2,10 +2,10 @@ import React from "react";
 import { StylesProductCard } from "./ProductCard.styled";
 import { ShoppingCart } from "lucide-react";
 import { formatPrice } from "@/utils/format";
+import { useRouter } from "next/navigation";
 
-// Tipagem dos produtos que está sendo recebido da API.
 interface Product {
-  image:string,
+  image: string;
   id: number;
   category: string;
   rating: number;
@@ -14,16 +14,20 @@ interface Product {
   price: number;
   stock: number;
 }
-// Criando o tipo Props para enviar o produto.
+
 interface Props {
   product: Product;
 }
 
 export default function ProductCard({ product }: Props) {
+  const router = useRouter();
+  const details = () => {
+    router.push(`/product/${product.id}`);
+  };
   return (
     <StylesProductCard>
       <div className="content-section">
-        <div className="product-card">
+        <div className="product-card" onClick={details}>
           <img src={product.image} alt={product.name} />
           <div className="product-category">
             <p>{product.category}</p>
@@ -45,7 +49,8 @@ export default function ProductCard({ product }: Props) {
             <button>
               <span>
                 <ShoppingCart />
-              </span> Adicionar
+              </span>{" "}
+              Adicionar
             </button>
           </div>
         </div>

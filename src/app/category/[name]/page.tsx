@@ -3,13 +3,12 @@ import React, { useEffect, useState } from "react";
 import { fetchProductsByCategory } from "@/services/api";
 import { StylesCategory } from "./category.styled";
 import ProductCard from "@/components/ProductCard/ProductCard";
-import Spinner from "@/app/spinnerLoading/Spinner";
+import Spinner from "@/components/spinnerLoading/Spinner";
 import Pagination from "@/components/Pagination/Pagination";
 import Footer from "@/components/Footer/Footer";
-import { useRouter } from "next/router";
 
-const categoryLabels: Record<string, string> = {
-  categoria: 'categoria',
+const category: Record<string, string> = {
+  categoria: "categoria",
   eletronicos: "Eletrônicos",
   roupas: "Roupas e Calçados",
   casa: "Casa e Decoração",
@@ -17,15 +16,13 @@ const categoryLabels: Record<string, string> = {
   esportes: "Esporte e Lazer",
 };
 
-
-
 export default function CategoryPage({ params }: { params: { name: string } }) {
   const { name } = params;
   const [allProducts, setAllProducts] = useState<any[]>([]);
   const [displayProducts, setDisplayProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPage = 6;
 
   useEffect(() => {
     const fetchCategoryProducts = async () => {
@@ -40,46 +37,43 @@ export default function CategoryPage({ params }: { params: { name: string } }) {
   }, [name]);
 
   useEffect(() => {
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
+    const start = (page - 1) * itemsPage;
+    const end = start + itemsPage;
     setDisplayProducts(allProducts.slice(start, end));
   }, [page, allProducts]);
 
-  const categoryName = categoryLabels[name] || name;
+  const categoryName = category[name] || name;
 
   return (
     <>
+      <StylesCategory>
+        <div className="content-section">
+          <h1>{categoryName}</h1>
 
-    <StylesCategory>
-      <div className="content-section">
-        <h1>{categoryName}</h1>
-
-        {loading ? (
-          <div className="loading-container">
-            <Spinner />
-          </div>
-        ) : allProducts.length === 0 ? (
-          <p>Nenhum produto encontrado.</p>
-        ) : (
-          <>
-            <div className="cards">
-              {displayProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+          {loading ? (
+            <div className="loading-container">
+              <Spinner />
             </div>
+          ) : allProducts.length === 0 ? (
+            <p>Nenhum produto encontrado.</p>
+          ) : (
+            <>
+              <div className="cards">
+                {displayProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
 
-            <Pagination
-              currentPage={page}
-              setPage={setPage}
-              totalPages={Math.ceil(allProducts.length / itemsPerPage)}
-            />
-          </>
-        )}
-         <Footer/>
-      </div>
-     
-    </StylesCategory>
-    
-        </>
+              <Pagination
+                currentPage={page}
+                setPage={setPage}
+                totalPages={Math.ceil(allProducts.length / itemsPage)}
+              />
+            </>
+          )}
+          <Footer />
+        </div>
+      </StylesCategory>
+    </>
   );
 }

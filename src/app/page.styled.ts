@@ -15,6 +15,7 @@ export const StylesHome = styled.div`
     padding: 0 10px;
     flex-direction: column;
   }
+  
 
   .loadind-container {
     width: 100%;

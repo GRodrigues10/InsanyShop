@@ -4,7 +4,7 @@ import ProductCard from "@/components/ProductCard/ProductCard";
 import { StylesHome } from "./page.styled";
 import Pagination from "@/components/Pagination/Pagination";
 import Footer from "@/components/Footer/Footer";
-import Spinner from "./spinnerLoading/Spinner";
+import Spinner from "../components/spinnerLoading/Spinner";
 
 export default function Home() {
   const [allProducts, setAllProducts] = useState<any[]>([]);
@@ -21,7 +21,9 @@ export default function Home() {
       let totalPages = 1;
 
       do {
-        const res = await fetch(`https://api.insany.co/api/products?page=${currentPage}&limit=10`);
+        const res = await fetch(
+          `https://api.insany.co/api/products?page=${currentPage}&limit=10`
+        );
         const data = await res.json();
         products = products.concat(data.products);
         totalPages = data.pagination?.totalPages || 1;
@@ -46,6 +48,7 @@ export default function Home() {
   return (
     <StylesHome>
       <div className="content-section">
+        <div className="selects"></div>
         <h1>Todos os Produtos</h1>
 
         {loading ? (
@@ -61,7 +64,11 @@ export default function Home() {
         )}
 
         {/* Pagination recebe função para alterar a página */}
-        <Pagination currentPage={page} setPage={setPage} totalPages={Math.ceil(allProducts.length / itemsPerPage)} />
+        <Pagination
+          currentPage={page}
+          setPage={setPage}
+          totalPages={Math.ceil(allProducts.length / itemsPerPage)}
+        />
 
         <Footer />
       </div>

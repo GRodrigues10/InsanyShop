@@ -20,6 +20,7 @@ export const StylesHeader = styled.header`
   h1 {
     font-size: 1.7rem;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .header-actions-desktop {

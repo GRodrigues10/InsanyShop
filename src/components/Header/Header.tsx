@@ -1,12 +1,17 @@
 'use client'; // Isso é obrigatório
 import { Search, ShoppingBag } from "lucide-react";
-
 import { StylesHeader } from "./Header.styled";
+import { useRouter } from "next/navigation";
+
 function Header() {
+  const router = useRouter();
+  const home = () => {
+    router.push('/');
+  }
   return (
     <StylesHeader>
       <div className="content-header">
-        <h1>InsanyShop</h1>
+        <h1 onClick={home}>InsanyShop</h1>
         <div className="header-actions-desktop">
           <div>
             <input type="text" placeholder="Procurando por algo específico?" />

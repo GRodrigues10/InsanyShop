@@ -6,6 +6,7 @@ export const StylesLayout = styled.div`
   height: 100px;
   display: flex;
   justify-content: center;
+  
 
   .content-section {
     width: 100%;
