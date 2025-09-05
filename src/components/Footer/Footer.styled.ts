@@ -38,6 +38,10 @@ export const StylesFooter = styled.footer`
         color: white;
     }
   }
+  .active{
+    background-color: black !important;
+    color:white;
+  }
 
   @media screen and (min-width: 530px) {
     .content-section .categories {

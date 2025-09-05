@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StylesFooter } from "./Footer.styled";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 function Footer() {
   const router = useRouter();
+  const pathname = usePathname(); // pega o caminho atual da URL
+  const [activeCategory, setActiveCategory] = useState<string>("");
 
-  //Criei um objeto para facilitar a implemetanção do código.
   const categories = [
     { name: "Eletrônicos", url: "eletronicos", count: 4 },
     { name: "Roupas e Calçados", url: "roupas", count: 4 },
@@ -15,7 +16,13 @@ function Footer() {
     { name: "Esporte e Lazer", url: "esportes", count: 3 },
   ];
 
-// Função reponsável por navegar entre as seções.
+  useEffect(() => {
+    // pega a categoria do URL e marca como ativa
+    const pathParts = pathname.split("/");
+    const currentCategory = pathParts[2] || ""; // assume que a categoria vem na segunda posição: /category/eletronicos
+    setActiveCategory(currentCategory);
+  }, [pathname]);
+
   const handleNavigate = (url: string) => {
     router.push(`/category/${url}`);
   };
@@ -28,6 +35,7 @@ function Footer() {
           {categories.map((category) => (
             <div
               key={category.url}
+              className={activeCategory === category.url ? "active" : ""}
               onClick={() => handleNavigate(category.url)}
             >
               <p>

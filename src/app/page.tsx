@@ -12,6 +12,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
+  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   // Esse useEffect vai buscar todos os produtos
   useEffect(() => {
@@ -44,6 +45,21 @@ export default function Home() {
     const end = start + itemsPerPage;
     setDisplayProducts(allProducts.slice(start, end));
   }, [page, allProducts]);
+
+  const handleSearch = async (query: string) => {
+  if (!query) {
+    setSearchResults([]);
+    return;
+  }
+
+  try {
+    const res = await fetch(`https://api.insany.co/api/search?q=${query}`);
+    const data = await res.json();
+    setSearchResults(data.products || []);
+  } catch (error) {
+    console.error("Erro ao buscar:", error);
+  }
+};
 
   return (
     <StylesHome>

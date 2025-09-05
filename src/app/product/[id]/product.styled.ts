@@ -135,8 +135,15 @@ export const StylesProduct = styled.div`
       width: 100%;
       justify-content: center;
       gap: 20px;
+    
     }
+
+       button span{
+    
+    left: 120px;
+  }
     .content-section .btn {
+
     }
     .content-section .details {
       gap: 40px;
@@ -181,6 +188,13 @@ export const StylesProduct = styled.div`
     .content-section .details .details-img .btn svg {
       width: 23px;
     }
+     button span{
+   
+    left: 150px;
+  }
+    
+    
+  }
 
     .content-section .details .details-img img {
       bottom: 15px;
@@ -233,7 +247,5 @@ export const StylesProduct = styled.div`
     .content-section .details .details-text .part2 {
       margin-bottom: 50px;
     }
-
- 
   }
 `;
