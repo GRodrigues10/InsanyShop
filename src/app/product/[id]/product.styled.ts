@@ -192,17 +192,19 @@ export const StylesProduct = styled.div`
    
     left: 150px;
   }
-    
-    
-  }
-
-    .content-section .details .details-img img {
+     .content-section .details .details-img img {
       bottom: 15px;
+      width: 420px;
+      height: 400px;
     }
     .content-section .details .details-text {
       height: 390px;
     }
+    
   }
+
+   
+  
   @media screen and (min-width: 1200px) {
     .content-section .details .details-img .btn {
       position: relative;
@@ -221,14 +223,14 @@ export const StylesProduct = styled.div`
         font-size: 20px;
       }
     }
-    .content-section img {
+    .content-section .details .details-img img {
       width: 640px;
       height: 580px;
       position: relative;
       bottom: 20px;
     }
-    .content-section .details {
-    }
+    /* .content-section .details {
+    } */
     .content-section .details .details-text {
       display: flex;
       justify-content: space-between;
@@ -248,4 +250,5 @@ export const StylesProduct = styled.div`
       margin-bottom: 50px;
     }
   }
+
 `;

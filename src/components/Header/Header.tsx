@@ -24,6 +24,10 @@ const fetchData = async () => {
   }
 };
 
+const goToCart = () => {
+  router.push('/cart')
+}
+
   return (
     <StylesHeader>
       <div className="content-header">
@@ -39,7 +43,7 @@ const fetchData = async () => {
             <Search size={20} className="search" onClick={() => han(search)} />
           </div>
           <div className="btn-container">
-            <ShoppingBag size={24} className="cart-button" />
+            <ShoppingBag size={24} className="cart-button" onClick={goToCart} />
             <span className="circle">2</span>
           </div>
         </div>

@@ -26,46 +26,38 @@ export const StylesCategory = styled.div`
     font-weight: bold;
   }
 
-  @media screen and (min-width:530px) {
-     .content-section h1 {
-    font-size: 2.2rem;
-  
-  }
-}
-
-  @media screen and (min-width:768px) {
-     .content-section h1 {
-    font-size: 2.4rem;
-    align-self: flex-start;
-  
+  @media screen and (min-width: 530px) {
+    .content-section h1 {
+      font-size: 2.2rem;
+    }
   }
 
-  .content-section .cards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  @media screen and (min-width: 768px) {
+    .content-section h1 {
+      font-size: 2.4rem;
+      align-self: flex-start;
+    }
+
+    .content-section .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
 
-@media screen and (min-width:992px) {
-     .content-section h1 {
-    font-size: 2.6rem;
-  
+  @media screen and (min-width: 992px) {
+    .content-section h1 {
+      font-size: 2.6rem;
+    }
+
+    .content-section .cards {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 15px;
+    }
   }
 
-  .content-section .cards{
-    grid-template-columns: repeat(3, 1fr);
+  @media screen and (min-width: 1200px) {
+    .content-section h1 {
+      font-size: 40px;
+    }
   }
-}
-
-
-@media screen and (min-width:1200px) {
-     .content-section h1 {
-    font-size: 40px;
-  
-     }
-}
-
-
-
-
 `;

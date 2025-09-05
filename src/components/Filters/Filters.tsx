@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import CategorySelect from "@/components/CategorySelect/CategorySelect";
 import SortSelect from "@/components/SortSelect/SortSelect";
 import { StylesLayout } from "@/app/layout.styled";
+import path from "path";
 
 export default function Filters() {
   const pathname = usePathname();

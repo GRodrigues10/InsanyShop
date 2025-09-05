@@ -15,7 +15,6 @@ export const StylesHome = styled.div`
     padding: 0 10px;
     flex-direction: column;
   }
-  
 
   .loadind-container {
     width: 100%;
@@ -82,6 +81,7 @@ export const StylesHome = styled.div`
         1fr
       ); // A tela passa a ter 3 colunas de cards.
       gap: 5px;
+      row-gap: 15px;
     }
   }
 
