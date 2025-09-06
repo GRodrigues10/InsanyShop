@@ -48,6 +48,7 @@ export const fetchProductsByCategory = async (category: string) => {
   );
 };
 
+// Essa função é responsável por buscar os produtos da InsanyShopp pelo ID.
 export const fetchProductById = async (id: number) => {
   const allProducts = await fetchProducts();
   return allProducts.find((p: any) => p.id === id) || null;

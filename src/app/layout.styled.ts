@@ -1,12 +1,11 @@
 "use client";
 import styled from "styled-components";
-// Mobile First - Construindo primeiro para telas menores.
+// Mobile First
 export const StylesLayout = styled.div`
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
-  
 
   .content-section {
     width: 100%;
@@ -34,8 +33,8 @@ export const StylesLayout = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    .content-section{
-    max-width: 1140px;
+    .content-section {
+      max-width: 1140px;
     }
   }
 `;

@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-
+// Mobile First
 export const StylesCategory = styled.div`
   width: 100%;
   display: flex;

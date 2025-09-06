@@ -25,6 +25,11 @@ function Header() {
     }
   };
 
+  const handleSearch = () => {
+    if (!search) return;
+    router.push(`/search?term=${search}`);
+  };
+
   const goToCart = () => {
     router.push("/cart");
   };
@@ -40,44 +45,51 @@ function Header() {
               placeholder="Procurando por algo específico?"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleSearch();
+              }}
             />
-            <Search size={20} className="search" onClick={() => search} />
+            <Search size={20} className="search" onClick={handleSearch} />
           </div>
           <div className="btn-container">
             <ShoppingBag size={24} className="cart-button" onClick={goToCart} />
             <span className="circle">2</span>
           </div>
         </div>
-      <div className="header-actions-mobile">
-  {/* Botão hamburger */}
-  <button className="close"
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-  
-    aria-label="Toggle Menu"
-  >
-    {isMenuOpen ? "X" : "☰"}
-  </button>
+        <div className="header-actions-mobile">
+          {/* Botão hamburger */}
+          <button
+            className="close"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? "X" : "☰"}
+          </button>
 
-  {/* Sidebar mobile */}
-  <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
-    <div className="header-actions-desktop">
-      <div className="input-content">
-        <input
-          type="text"
-          placeholder="Procurando por algo específico?"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          onKeyDown={(e) => { if (e.key === "Enter") fetchData(); }}
-        />
-        <button className="btn">Buscar</button>
-      </div>
-      <div className="btn-container">
-        
-       <button className="btn-cart"  onClick={goToCart}> Ver Carrinho</button>
-      </div>
-    </div>
-  </div>
-</div>
+          {/* Sidebar mobile */}
+          <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+            <div className="header-actions-desktop">
+              <div className="input-content">
+                <input
+                  type="text"
+                  placeholder="Procurando por algo específico?"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") fetchData();
+                  }}
+                />
+                <button className="btn" onClick={handleSearch}>Buscar</button>
+              </div>
+              <div className="btn-container">
+                <button className="btn-cart" onClick={goToCart}>
+                  {" "}
+                  Ver Carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Renderiza os cards da busca */}

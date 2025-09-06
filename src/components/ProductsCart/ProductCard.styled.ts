@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-
+// Mobile First
 export const StylesCartCards = styled.div`
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ export const StylesCartCards = styled.div`
 
     &:hover {
       transform: scale(1.01);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* leve destaque no hover */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
     }
   }
 
@@ -37,8 +37,8 @@ export const StylesCartCards = styled.div`
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    backface-visibility: hidden; /* evita blur temporário */
-    transform: translateZ(0); /* força renderização em GPU */
+    backface-visibility: hidden; 
+    transform: translateZ(0); 
   }
 
   .text {

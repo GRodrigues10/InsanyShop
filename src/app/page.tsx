@@ -5,6 +5,8 @@ import { StylesHome } from "./page.styled";
 import Pagination from "@/components/Pagination/Pagination";
 import Footer from "@/components/Footer/Footer";
 import Spinner from "../components/spinnerLoading/Spinner";
+import { fetchProducts } from "@/services/api";
+
 
 export default function Home() {
   const [allProducts, setAllProducts] = useState<any[]>([]);
@@ -12,60 +14,52 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
+  const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
-  // Esse useEffect vai buscar todos os produtos
+  // Busca todos os produtos quando a página carrega
   useEffect(() => {
-    const fetchAllProducts = async () => {
-      let products: any[] = [];
-      let currentPage = 1;
-      let totalPages = 1;
-
-      do {
-        const res = await fetch(
-          `https://api.insany.co/api/products?page=${currentPage}&limit=10`
-        );
-        const data = await res.json();
-        products = products.concat(data.products);
-        totalPages = data.pagination?.totalPages || 1;
-        currentPage++;
-      } while (currentPage <= totalPages);
-
-      console.log("Todos os produtos:", products);
+    const loadProducts = async () => {
+      setLoading(true);
+      const products = await fetchProducts();
       setAllProducts(products);
       setLoading(false);
     };
-
-    fetchAllProducts();
+    loadProducts();
   }, []);
 
-  //Esse useEffect vai atualizar os produtos exibidos de acordo com a página.
+  // Atualiza os produtos que estão sendo exibidos de acordo com a página do site.
   useEffect(() => {
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
-    setDisplayProducts(allProducts.slice(start, end));
-  }, [page, allProducts]);
 
+    if (searchTerm) {
+      setDisplayProducts(searchResults.slice(start, end));
+    } else {
+      setDisplayProducts(allProducts.slice(start, end));
+    }
+  }, [page, allProducts, searchResults, searchTerm]);
+
+  // Função de busca
   const handleSearch = async (query: string) => {
-  if (!query) {
-    setSearchResults([]);
-    return;
-  }
-
-  try {
-    const res = await fetch(`https://api.insany.co/api/search?q=${query}`);
-    const data = await res.json();
-    setSearchResults(data.products || []);
-  } catch (error) {
-    console.error("Erro ao buscar:", error);
-  }
-};
+    setSearchTerm(query);
+    if (!query) {
+      setSearchResults([]);
+      setPage(1);
+      return;
+    }
+    const results = allProducts.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setSearchResults(results);
+    setPage(1);
+  };
 
   return (
     <StylesHome>
       <div className="content-section">
         <div className="selects"></div>
-        <h1>Todos os Produtos</h1>
+        <h1>{searchTerm ? `Resultados para "${searchTerm}"` : "Todos os Produtos"}</h1>
 
         {loading ? (
           <div className="loading-container">
@@ -79,11 +73,13 @@ export default function Home() {
           </div>
         )}
 
-        {/* Pagination recebe função para alterar a página */}
+        {/* Esse Pagination aqui recebe função para alterar a página do sitee */}
         <Pagination
           currentPage={page}
           setPage={setPage}
-          totalPages={Math.ceil(allProducts.length / itemsPerPage)}
+          totalPages={Math.ceil(
+            (searchTerm ? searchResults.length : allProducts.length) / itemsPerPage
+          )}
         />
 
         <Footer />

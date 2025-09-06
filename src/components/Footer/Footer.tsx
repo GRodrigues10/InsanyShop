@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 function Footer() {
   const router = useRouter();
-  const pathname = usePathname(); // pega o caminho atual da URL
+  const pathname = usePathname();
   const [activeCategory, setActiveCategory] = useState<string>("");
 
   const categories = [
@@ -17,9 +17,8 @@ function Footer() {
   ];
 
   useEffect(() => {
-    // pega a categoria do URL e marca como ativa
     const pathParts = pathname.split("/");
-    const currentCategory = pathParts[2] || ""; // assume que a categoria vem na segunda posição: /category/eletronicos
+    const currentCategory = pathParts[2] || "";
     setActiveCategory(currentCategory);
   }, [pathname]);
 

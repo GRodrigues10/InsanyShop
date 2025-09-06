@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
-// Utilização do Mobile First
-// Página de erro 404. Caso o usuário acesse uma página que não existe, essa página vai aparecer.
+//Mobile First
+
 export const StylesNotFound = styled.div`
   width: 100%;
   height: 60vh;

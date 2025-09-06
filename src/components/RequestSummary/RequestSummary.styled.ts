@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+// Mobile First
 export const StylesRequestSummary = styled.div`
   background-color: #f0f5ff;
   display: flex;
