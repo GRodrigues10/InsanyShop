@@ -3,15 +3,20 @@ import "./globals.css";
 // import { StylesLayout } from "./layout.styled";
 import StyledComponentsRegistry from "../lib/registry";
 import Filters from "@/components/Filters/Filters";
+import { url } from "inspector";
 // import { CartProvider } from "../context/useContext";
 
 // Configurando o metadata do site.
 export const metadata = {
-  title: "InsanyShop 🛒 | E-commerce ",
+  title: "InsanyShop 🛒 | E-commerce",
   description:
     "InsanyShop - E-commerce de produtos variados como eletrônicos, roupas e móveis. Site rápido, seguro e fácil de usar.",
   icons: {
-    icon: "/shop.png",
+    icon: '/shop2.png'
+      
+     
+      
+  
   },
 };
 
