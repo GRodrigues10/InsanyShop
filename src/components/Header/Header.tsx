@@ -3,14 +3,16 @@ import { Search, ShoppingBag } from "lucide-react";
 import { StylesHeader } from "./Header.styled";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Product } from "@/services/types";
 
 function Header() {
   const router = useRouter();
   const [search, setSearch] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<Product[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const fetchData = async () => {
+   
     if (!search) return;
 
     try {

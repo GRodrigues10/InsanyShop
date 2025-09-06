@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 import { fetchProductById } from "@/services/api";
 import Spinner from "@/components/spinnerLoading/Spinner";
 import { formatPrice } from "@/utils/format";
+import { Product } from "@/services/types";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
   const router = useRouter();
-  const [product, setProduct] = useState<any | null>(null);
+  const [product, setProduct] = useState<Product| null>(null);
 
   useEffect(() => {
     if (id) {
@@ -28,7 +29,7 @@ export default function ProductDetailPage() {
             <div className="btn">
               <span onClick={() => router.push("/")}>
                 <Undo2 />
-              </span>{" "}
+              </span>
               Voltar
             </div>
             <img src={product.image} alt={product.name} />
@@ -46,7 +47,7 @@ export default function ProductDetailPage() {
             <button>
               <span>
                 <ShoppingCart />
-              </span>{" "}
+              </span>
               Adicionar
             </button>
           </div>

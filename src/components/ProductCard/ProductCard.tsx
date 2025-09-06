@@ -4,17 +4,8 @@ import { ShoppingCart } from "lucide-react";
 import { formatPrice } from "@/utils/format";
 import { useRouter } from "next/navigation";
 import { addToCart } from "@/utils/addCart";
+import { Product } from "@/services/types";
 
-interface Product {
-  image: string;
-  id: number;
-  category: string;
-  rating: number;
-  name: string;
-  description: string;
-  price: number;
-  stock: number;
-}
 
 interface Props {
   product: Product;

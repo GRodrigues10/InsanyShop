@@ -1,7 +1,8 @@
 // Essa função é responsável por buscar todos os produtos da InsanyShop!
+import { Product } from "./types";
 export const fetchProducts = async () => {
   try {
-    let allProducts: any[] = [];
+    let allProducts: Product[] = [];
     let page = 1;
     const limit = 10;
     let hasMore = true;
@@ -43,7 +44,7 @@ export const fetchProductsByCategory = async (category: string) => {
   const allProducts = await fetchProducts();
 
   return allProducts.filter(
-    (product: any) =>
+    (product: Product) =>
       product.category.toLowerCase() === category.toLowerCase()
   );
 };
@@ -51,5 +52,5 @@ export const fetchProductsByCategory = async (category: string) => {
 // Essa função é responsável por buscar os produtos da InsanyShopp pelo ID.
 export const fetchProductById = async (id: number) => {
   const allProducts = await fetchProducts();
-  return allProducts.find((p: any) => p.id === id) || null;
+  return allProducts.find((p: Product) => p.id === id) || null;
 };

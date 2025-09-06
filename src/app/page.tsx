@@ -6,16 +6,16 @@ import Pagination from "@/components/Pagination/Pagination";
 import Footer from "@/components/Footer/Footer";
 import Spinner from "../components/spinnerLoading/Spinner";
 import { fetchProducts } from "@/services/api";
-
+import { Product } from "@/services/types";
 
 export default function Home() {
-  const [allProducts, setAllProducts] = useState<any[]>([]);
-  const [displayProducts, setDisplayProducts] = useState<any[]>([]);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
 
   // Busca todos os produtos quando a página carrega
   useEffect(() => {
@@ -41,19 +41,19 @@ export default function Home() {
   }, [page, allProducts, searchResults, searchTerm]);
 
   // Função de busca
-  const handleSearch = async (query: string) => {
-    setSearchTerm(query);
-    if (!query) {
-      setSearchResults([]);
-      setPage(1);
-      return;
-    }
-    const results = allProducts.filter((product) =>
-      product.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setSearchResults(results);
-    setPage(1);
-  };
+  // const handleSearch = async (query: string) => {
+  //   setSearchTerm(query);
+  //   if (!query) {
+  //     setSearchResults([]);
+  //     setPage(1);
+  //     return;
+  //   }
+  //   const results = allProducts.filter((product) =>
+  //     product.name.toLowerCase().includes(query.toLowerCase())
+  //   );
+  //   setSearchResults(results);
+  //   setPage(1);
+  // };
 
   return (
     <StylesHome>

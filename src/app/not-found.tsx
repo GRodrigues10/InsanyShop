@@ -3,7 +3,7 @@ import React from 'react'
 import { StylesNotFound } from './not-found.styled'
 import { useRouter } from 'next/navigation'
 // Página de Erro 404.
-function notFound() {
+function NotFound() {
   const router = useRouter();
   const backPage = () => {
     router.push('/');
@@ -19,4 +19,4 @@ function notFound() {
   )
 }
 
-export default notFound
+export default NotFound

@@ -6,7 +6,7 @@ import ProductCart from "@/components/ProductsCart/ProductCart";
 import { useRouter } from "next/navigation";
 import RequestSummary from "@/components/RequestSummary/RequestSummary";
 
-function page() {
+function Page() {
   const router = useRouter();
   const goToHome = () => {
     router.push("/");
@@ -37,4 +37,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

@@ -6,6 +6,8 @@ import ProductCard from "@/components/ProductCard/ProductCard";
 import Spinner from "@/components/spinnerLoading/Spinner";
 import Pagination from "@/components/Pagination/Pagination";
 import Footer from "@/components/Footer/Footer";
+import { Product } from "@/services/types";
+
 
 const category: Record<string, string> = {
   categoria: "categoria",
@@ -18,8 +20,8 @@ const category: Record<string, string> = {
 
 export default function CategoryPage({ params }: { params: { name: string } }) {
   const { name } = params;
-  const [allProducts, setAllProducts] = useState<any[]>([]);
-  const [displayProducts, setDisplayProducts] = useState<any[]>([]);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const itemsPage = 6;

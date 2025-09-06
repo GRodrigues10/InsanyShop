@@ -1,6 +1,6 @@
 import Header from "@/components/Header/Header";
 import "./globals.css";
-import { StylesLayout } from "./layout.styled";
+// import { StylesLayout } from "./layout.styled";
 import StyledComponentsRegistry from "../lib/registry";
 import Filters from "@/components/Filters/Filters";
 // import { CartProvider } from "../context/useContext";
