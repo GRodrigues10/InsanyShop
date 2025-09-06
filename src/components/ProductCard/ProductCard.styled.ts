@@ -8,7 +8,7 @@ export const StylesProductCard = styled.div`
   .product-card {
     max-width: 310px;
     min-width: 310px;
-    height: 470px;
+    height: 450px;
     border: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
