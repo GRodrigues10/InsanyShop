@@ -1,4 +1,4 @@
-// Formata o preços
+// Formata os preços
 export const formatPrice = (value: number, decimals = 2): string => {
   return value.toLocaleString('pt-BR', {
     minimumFractionDigits: decimals,

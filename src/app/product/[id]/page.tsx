@@ -1,7 +1,7 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
 import { StylesProduct } from "./product.styled";
-import { ArrowLeftCircle, ShoppingCart } from "lucide-react";
+import { ArrowLeftCircle, ShoppingCart, Undo2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { fetchProductById } from "@/services/api";
 import Spinner from "@/components/spinnerLoading/Spinner";
@@ -27,7 +27,7 @@ export default function ProductDetailPage() {
           <div className="details-img">
             <div className="btn">
               <span onClick={() => router.push("/")}>
-                <ArrowLeftCircle />
+                <Undo2 />
               </span>{" "}
               Voltar
             </div>

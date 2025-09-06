@@ -3,6 +3,7 @@ import { StylesProductCard } from "./ProductCard.styled";
 import { ShoppingCart } from "lucide-react";
 import { formatPrice } from "@/utils/format";
 import { useRouter } from "next/navigation";
+import { addToCart } from "@/utils/addCart";
 
 interface Product {
   image: string;
@@ -21,9 +22,17 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   const router = useRouter();
+
   const details = () => {
     router.push(`/product/${product.id}`);
   };
+
+ const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.stopPropagation();
+  addToCart(product);
+  alert(`${product.name} adicionado ao carrinho!`);
+};
+
   return (
     <StylesProductCard>
       <div className="content-section">
@@ -46,7 +55,7 @@ export default function ProductCard({ product }: Props) {
             <p>{product.stock} em estoque</p>
           </div>
           <div className="btn">
-            <button>
+            <button onClick={handleAddToCart}>
               <span>
                 <ShoppingCart />
               </span>{" "}

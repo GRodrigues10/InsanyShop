@@ -90,4 +90,10 @@ export const StylesHome = styled.div`
       font-size: 40px;
     }
   }
+
+  @media screen and (min-width: 1440px){
+     .content-section h1{
+       max-width: 1110px; 
+     }
+  }
 `;

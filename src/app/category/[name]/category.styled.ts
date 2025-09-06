@@ -60,4 +60,14 @@ export const StylesCategory = styled.div`
       font-size: 40px;
     }
   }
+
+  @media screen and (min-width: 1440px) {
+    .content-section h1{
+      margin-left: 18px;
+    }
+   .content-section{
+    max-width: 1165px;
+   }
+
+  }
 `;

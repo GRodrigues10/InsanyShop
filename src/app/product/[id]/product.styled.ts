@@ -37,6 +37,10 @@ export const StylesProduct = styled.div`
   .content-section .btn span svg {
     width: 20px;
     cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid;
+    
+    padding: 3px;
     transition: 0.4s ease;
     &:hover {
       color: black;

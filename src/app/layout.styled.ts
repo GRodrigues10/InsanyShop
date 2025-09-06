@@ -32,4 +32,10 @@ export const StylesLayout = styled.div`
       gap: 0px;
     }
   }
+
+  @media screen and (min-width: 1440px) {
+    .content-section{
+    max-width: 1140px;
+    }
+  }
 `;

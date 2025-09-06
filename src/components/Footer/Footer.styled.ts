@@ -32,15 +32,15 @@ export const StylesFooter = styled.footer`
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     cursor: pointer;
-    transition: .4s ease;
-    &:hover{
-        background-color: black;
-        color: white;
+    transition: 0.4s ease;
+    &:hover {
+      background-color: black;
+      color: white;
     }
   }
-  .active{
+  .active {
     background-color: black !important;
-    color:white;
+    color: white;
   }
 
   @media screen and (min-width: 530px) {
@@ -54,15 +54,23 @@ export const StylesFooter = styled.footer`
     }
   }
 
-    @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     .content-section .categories {
       grid-template-columns: repeat(4, 1fr);
     }
   }
 
-   @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     .content-section .categories {
       display: flex;
+      max-width: 970px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+   .content-section .categories {
+      max-width: 1100px;
+      width: 100%;
     }
   }
 `;

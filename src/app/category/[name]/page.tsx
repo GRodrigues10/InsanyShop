@@ -43,6 +43,7 @@ export default function CategoryPage({ params }: { params: { name: string } }) {
   }, [page, allProducts]);
 
   const categoryName = category[name] || name;
+  
 
   return (
     <>

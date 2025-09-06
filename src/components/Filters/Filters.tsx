@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation";
 import CategorySelect from "@/components/CategorySelect/CategorySelect";
 import SortSelect from "@/components/SortSelect/SortSelect";
 import { StylesLayout } from "@/app/layout.styled";
-import path from "path";
 
 export default function Filters() {
   const pathname = usePathname();
 
-  // Não exibe os selects na página /products
+  // Essa condicional não exibe os selects na página /products e /cart
   if (pathname.startsWith("/product/")) return null;
+  if (pathname.startsWith("/cart")) return null;
 
   return (
     <StylesLayout>

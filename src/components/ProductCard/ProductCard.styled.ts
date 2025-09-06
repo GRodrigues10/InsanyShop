@@ -10,7 +10,7 @@ export const StylesProductCard = styled.div`
     min-width: 310px;
     height: 470px;
     border: none;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -21,8 +21,8 @@ export const StylesProductCard = styled.div`
     backface-visibility: hidden;
 
     &:hover {
-      transform: scale(1.05); 
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); 
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     }
   }
 
@@ -33,7 +33,7 @@ export const StylesProductCard = styled.div`
     border-radius: 15px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    transition: inherit; 
+    transition: inherit;
     display: block;
   }
 
@@ -90,9 +90,9 @@ export const StylesProductCard = styled.div`
     font-size: 16px;
     font-weight: 500;
     border-radius: 5px;
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
     cursor: pointer;
-    transition: all 0.4s ease; 
+    transition: all 0.4s ease;
   }
 
   button:hover {
@@ -100,5 +100,26 @@ export const StylesProductCard = styled.div`
     color: black;
     border-color: black;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media screen and (min-width: 1440px) {
+    .product-card {
+      max-width: 356px;
+      height: 520px;
+      font-size: 15.5px;
+    }
+
+    .product-card img {
+      height: 270px;
+    }
+    button {
+      width: 100%;
+      max-width: 314px;
+      font-size: 17px;
+    }
+
+    .product-info h3 {
+      font-size: 24px;
+    }
   }
 `;
