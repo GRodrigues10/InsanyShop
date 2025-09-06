@@ -105,7 +105,7 @@ export const StylesProductCard = styled.div`
   @media screen and (min-width: 1440px) {
     .product-card {
       max-width: 356px;
-      height: 520px;
+      height: 500px;
       font-size: 15.5px;
     }
 
