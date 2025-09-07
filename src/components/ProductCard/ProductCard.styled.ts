@@ -6,7 +6,7 @@ export const StylesProductCard = styled.div`
   height: 100%;
 
   .product-card {
-    max-width: 310px;
+    width: 310px;
     min-width: 310px;
     height: 480px;
     border: none;
@@ -117,11 +117,10 @@ export const StylesProductCard = styled.div`
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
-  @media screen and (min-width: 1440px) {
+  /* @media screen and (min-width: 1440px) {
     .product-card {
-      max-width: 356px;
+      width: 356px;
       height: 520px;
-      font-size: 15.5px;
     }
 
     .product-card img {
@@ -138,12 +137,12 @@ export const StylesProductCard = styled.div`
     }
 
     .product-description {
-      gap: 5px;
+      gap: 10px;
     }
 
     .product-info {
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .product-info h3 {
       font-size: 1.5rem;
@@ -153,5 +152,5 @@ export const StylesProductCard = styled.div`
 
       left: 100px;
     }
-  }
+  } */
 `;
