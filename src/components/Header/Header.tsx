@@ -4,15 +4,16 @@ import { StylesHeader } from "./Header.styled";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Product } from "@/services/types";
+import { useSearch } from "@/context/searchContext"; // import do contexto
 
 function Header() {
   const router = useRouter();
+  const { setTerm } = useSearch(); // pega a função para atualizar o termo
   const [search, setSearch] = useState("");
   const [results, setResults] = useState<Product[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const fetchData = async () => {
-   
     if (!search) return;
 
     try {
@@ -20,7 +21,6 @@ function Header() {
       const data = await res.json();
       console.log("Retorno da API:", data);
 
-      // se a API retorna { products: [...] }
       setResults(data.products || []);
     } catch (error) {
       console.error("Erro ao buscar:", error);
@@ -29,7 +29,8 @@ function Header() {
 
   const handleSearch = () => {
     if (!search) return;
-    router.push(`/search?term=${search}`);
+    setTerm(search); // atualiza o termo no contexto
+    router.push("/search");
   };
 
   const goToCart = () => {
@@ -59,7 +60,6 @@ function Header() {
           </div>
         </div>
         <div className="header-actions-mobile">
-          {/* Botão hamburger */}
           <button
             className="close"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -68,7 +68,6 @@ function Header() {
             {isMenuOpen ? "X" : "☰"}
           </button>
 
-          {/* Sidebar mobile */}
           <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
             <div className="header-actions-desktop">
               <div className="input-content">
@@ -78,14 +77,15 @@ function Header() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") fetchData();
+                    if (e.key === "Enter") handleSearch();
                   }}
                 />
-                <button className="btn" onClick={handleSearch}>Buscar</button>
+                <button className="btn" onClick={handleSearch}>
+                  Buscar
+                </button>
               </div>
               <div className="btn-container">
                 <button className="btn-cart" onClick={goToCart}>
-                  {" "}
                   Ver Carrinho
                 </button>
               </div>
@@ -94,7 +94,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Renderiza os cards da busca */}
       {results.length > 0 && (
         <div className="search-results">
           {results.map((product) => (

@@ -4,6 +4,7 @@ import "./globals.css";
 import StyledComponentsRegistry from "../lib/registry";
 import Filters from "@/components/Filters/Filters";
 import { url } from "inspector";
+import { SearchProvider } from "@/context/searchContext";
 // import { CartProvider } from "../context/useContext";
 
 // Configurando o metadata do site.
@@ -12,11 +13,7 @@ export const metadata = {
   description:
     "InsanyShop - E-commerce de produtos variados como eletrônicos, roupas e móveis. Site rápido, seguro e fácil de usar.",
   icons: {
-    icon: '/shop2.png'
-      
-     
-      
-  
+    icon: "/shop2.png",
   },
 };
 
@@ -29,10 +26,13 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         <StyledComponentsRegistry>
-          <Header />
+          <SearchProvider>
+            <Header />
 
-          <Filters />
-          {children}
+            <Filters />
+
+            {children}
+          </SearchProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
