@@ -82,6 +82,10 @@ export const StylesCartCards = styled.div`
     margin-bottom: 10px;
   }
 
+  .text .footer p{
+color: #09090A;
+  }
+
   .text .footer select {
     border: 1px solid;
     width: 70px;

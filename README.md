@@ -49,7 +49,7 @@ Siga os passos abaixo para rodar o projeto na sua máquina:
 
 ```bash
 # 1. Clone este repositório
-git clone https://github.com/seu-usuario/insany-shop.git
+git clone https://github.com/seu-usuario/InsanyShop.git
 
 # 2. Acesse a pasta do projeto
 cd insany-shop

@@ -24,7 +24,7 @@ export const StylesHeader = styled.header`
   }
 
   .header-actions-desktop {
-    //Na versão mobile, esse elemento não aparece.
+    
     display: none;
   }
   .mobile-menu {
@@ -38,18 +38,18 @@ export const StylesHeader = styled.header`
     padding: 2rem 1rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 200; /* menor que o botão fechar */
+    z-index: 200; 
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  /* Quando abrir */
+  
   .mobile-menu.open {
     transform: translateX(0);
   }
 
-  /* Input estilizado */
+  
   .mobile-menu input {
     width: 100%;
     padding: 10px;
@@ -57,13 +57,12 @@ export const StylesHeader = styled.header`
     border: 1px solid #ccc;
     outline: none;
     background-color: #f0f5ff;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-top: 50px;
   }
 
-  /* Botão de busca: agora fica inline com input */
   .mobile-menu .search {
-    /* separação do input */
+   
     cursor: pointer;
     color: #5d5d6d;
     transition: color 0.3s ease;
@@ -92,14 +91,13 @@ export const StylesHeader = styled.header`
     }
   }
 
-  /* Container interno para o carrinho e input juntos */
   .mobile-menu .header-actions-desktop {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-  /* Botão fechar acima da sidebar */
+ 
   .content-header .close {
     position: relative;
     z-index: 300;
@@ -112,7 +110,7 @@ export const StylesHeader = styled.header`
   .mobile-menu .btn-cart {
     font-size: 1rem;
     color: white;
-    background-color: #00b74a; /* verde forte */
+    background-color: #00b74a; 
     width: 100%;
     padding: 5px;
     border-radius: 5px;
@@ -126,12 +124,12 @@ export const StylesHeader = styled.header`
   }
 
   .mobile-menu .btn-cart:hover {
-    background-color: #009e3d; /* mais fechado no hover */
+    background-color: #009e3d; 
     color: #f8f9fa;
   }
 
   .mobile-menu .btn-cart:active {
-    background-color: #008531; /* bem forte no active */
+    background-color: #008531; 
     color: #e9ecef;
   }
 
@@ -156,7 +154,7 @@ export const StylesHeader = styled.header`
   }
 
   @media screen and (min-width: 530px) {
-    // Versão para telas com largura mínima de 530px.
+   
 
     h1 {
       font-size: 1.9rem;
@@ -170,7 +168,7 @@ export const StylesHeader = styled.header`
   }
 
   @media screen and (min-width: 768px) {
-    // Versão para telas com largura mínima de 768px.
+ 
     h1 {
       font-size: 2rem;
     }
@@ -189,6 +187,7 @@ export const StylesHeader = styled.header`
         width: 352px;
         height: 42px;
         border: none;
+        font-size: 1rem;
         background-color: #f0f5ff;
         outline: none;
       }
@@ -236,7 +235,7 @@ export const StylesHeader = styled.header`
   }
 
   @media screen and (min-width: 992px) {
-    // Versão para telas com largura mínima de 992px.
+ 
 
     h1 {
       font-size: 40px;
@@ -244,7 +243,7 @@ export const StylesHeader = styled.header`
   }
 
   @media screen and (min-width: 1440px) {
-    // Versão para telas com largura mínima de 992px.
+    
     .content-header {
       max-width: 1140px;
     }
