@@ -132,8 +132,7 @@ export const StylesProductCard = styled.div`
 
     .product-info {
       margin-top: 15px;
-
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
 `;
