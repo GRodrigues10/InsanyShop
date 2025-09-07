@@ -48,7 +48,7 @@ export default function ProductCard({ product }: Props) {
           <div className="btn">
             <button onClick={handleAddToCart}>
               <span>
-                <ShoppingCart />
+                <ShoppingCart/>
               </span>{" "}
               Adicionar
             </button>
