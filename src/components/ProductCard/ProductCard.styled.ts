@@ -100,7 +100,6 @@ export const StylesProductCard = styled.div`
   .btn span {
     position: absolute;
     left: 80px;
-    bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,8 +113,7 @@ export const StylesProductCard = styled.div`
   button {
     background-color: black;
     color: white;
-    padding: 0.6rem 1rem;
-
+    padding: 0.65rem 1rem;
     width: 100%;
     max-width: 16.875rem;
     font-size: 1rem;
