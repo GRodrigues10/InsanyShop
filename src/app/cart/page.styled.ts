@@ -56,6 +56,11 @@ export const StylesCart = styled.div`
     justify-content: center;
   }
 
+  .cart-products p strong {
+    position: relative;
+    left: 5px;
+  }
+
   @media screen and (min-width: 530px) {
     .cart-products h1 {
       font-size: 1.7rem;
@@ -97,25 +102,17 @@ export const StylesCart = styled.div`
   @media screen and (min-width: 992px) {
     /* flex-direction: column; */
     flex-direction: row;
-    .cart-products{
-      
-     
-   
+    .cart-products {
     }
     .cart-products h1 {
       font-size: 24px;
       align-self: flex-start;
     }
-    
 
-      .cart-products p {
-      font-size: 24px;
+    .cart-products p {
+      font-size: 16px;
       align-self: flex-start;
-      
     }
-
-   
-  
   }
 
   @media screen and (min-width: 1200px) {
@@ -153,7 +150,7 @@ export const StylesCart = styled.div`
     }
   }
 
-   @media screen and (min-width: 1440px) {
-      gap: 30px;
-   }
+  @media screen and (min-width: 1440px) {
+    gap: 30px;
+  }
 `;

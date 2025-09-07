@@ -23,7 +23,7 @@ function Page() {
           </div>
           <h1>SEU CARRINHO</h1>
           <p>
-            Total (3 produtos) <strong> R$ 161,00 </strong>
+            Total (3 produtos) <strong>R$ 161,00</strong>
           </p>
         </div>
         <div className="cards">

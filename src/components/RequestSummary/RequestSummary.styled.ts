@@ -57,6 +57,7 @@ export const StylesRequestSummary = styled.div`
     width: 100%;
     margin-top: 20px;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
     transition: 0.4s ease;
 
@@ -75,8 +76,8 @@ export const StylesRequestSummary = styled.div`
     text-decoration: underline;
     color: #737380;
     cursor: pointer;
-    transition: .4s ease;
-    &:hover{
+    transition: 0.4s ease;
+    &:hover {
       color: #36363f;
     }
   }
