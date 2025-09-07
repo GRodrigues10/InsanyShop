@@ -100,10 +100,10 @@ export const StylesProductCard = styled.div`
   .btn span {
     position: absolute;
     left: 80px;
+    bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
 
   .btn span svg {
