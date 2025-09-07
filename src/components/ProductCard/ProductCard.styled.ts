@@ -105,32 +105,37 @@ export const StylesProductCard = styled.div`
     justify-content: center;
   }
 
-  .btn span svg {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
   button {
-    background-color: black;
-    color: white;
-    font-weight: normal;
-    padding: 0.65rem 1rem;
-    width: 100%;
-    max-width: 16.875rem;
-    font-size: 1rem;
-    min-height: 2.9rem;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
+  background-color: black;
+  color: white;
+  font-weight: normal;
+  padding: 0.65rem 1rem;
+  width: 100%;
+  max-width: 16.875rem;
+  font-size: 1rem;
+  min-height: 2.9rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
 
-  button:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
-  }
+  display: flex;               /* 🔥 botão vira flex container */
+  align-items: center;         /* alinha verticalmente */
+  justify-content: center;     /* centraliza ícone + texto */
+  gap: 0.5rem;                 /* espaço entre ícone e texto */
+}
+
+.btn span {
+  position: static;            /* 🔥 remove o absolute */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn span svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
   @media screen and (min-width: 1440px) {
     .product-card {
@@ -163,9 +168,9 @@ export const StylesProductCard = styled.div`
       font-size: 1.5rem;
     }
     .btn span {
-      position: absolute;
+     
 
-      left: 100px;
+      
     }
   }
 `;
