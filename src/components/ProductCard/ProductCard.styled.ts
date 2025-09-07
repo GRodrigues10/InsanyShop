@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-// Estilos dos ccards dos produtos.
+//Mobile First
 export const StylesProductCard = styled.div`
   width: 100%;
   height: 100%;
@@ -53,6 +53,7 @@ export const StylesProductCard = styled.div`
     text-shadow: 1px 1px 1px #555;
     font-size: 1rem;
   }
+
   .product-description {
     padding-inline: 20px;
     display: flex;
@@ -74,7 +75,7 @@ export const StylesProductCard = styled.div`
   }
 
   .product-info h3 {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: bold;
     color: #1b9847;
   }
@@ -90,19 +91,19 @@ export const StylesProductCard = styled.div`
     justify-content: center;
     position: relative;
   }
+
   .btn span {
     position: absolute;
-
     left: 80px;
   }
 
   button {
     background-color: black;
     color: white;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     width: 100%;
-    max-width: 270px;
-    font-size: 16px;
+    max-width: 16.875rem;
+    font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
     border: 1px solid transparent;
@@ -114,7 +115,7 @@ export const StylesProductCard = styled.div`
     background-color: white;
     color: black;
     border-color: black;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
   }
 
   /* @media screen and (min-width: 1440px) {
