@@ -5,7 +5,7 @@ O projeto foi criado com foco em boas práticas, performance e organização de 
 
 ---
 
-## 🚀 Tecnologias  
+## Tecnologias  
 
 - **Next.js**
 - **TypeScript**
