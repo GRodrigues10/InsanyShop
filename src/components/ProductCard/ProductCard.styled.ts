@@ -8,7 +8,7 @@ export const StylesProductCard = styled.div`
   .product-card {
     width: 310px;
     min-width: 310px;
-    height: 480px;
+    min-height: 480px;
     border: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -34,6 +34,11 @@ export const StylesProductCard = styled.div`
     border-bottom-right-radius: 0px;
     transition: inherit;
     display: block;
+  }
+
+  .product-card p,
+  .product-card h3 {
+    line-height: 1.45; /* garante espaçamento uniforme */
   }
 
   .product-category {
