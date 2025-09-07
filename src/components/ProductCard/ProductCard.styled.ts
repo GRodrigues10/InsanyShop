@@ -100,6 +100,10 @@ export const StylesProductCard = styled.div`
   .btn span {
     position: absolute;
     left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
   }
 
   .btn span svg {
@@ -110,7 +114,7 @@ export const StylesProductCard = styled.div`
   button {
     background-color: black;
     color: white;
-    padding: 0.55rem 1rem;
+    padding: 0.6rem 1rem;
 
     width: 100%;
     max-width: 16.875rem;
