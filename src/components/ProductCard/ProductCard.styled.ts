@@ -131,8 +131,8 @@ export const StylesProductCard = styled.div`
     }
 
     .product-info {
-      margin-top: 15px;
-      margin-bottom: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .product-info h3 {
       font-size: 24px;
