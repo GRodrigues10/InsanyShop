@@ -134,5 +134,12 @@ export const StylesProductCard = styled.div`
       margin-top: 15px;
       margin-bottom: 15px;
     }
+    .product-info h3 {
+      font-size: 24px;
+    }
+
+    .btn button {
+      height: 40px;
+    }
   }
 `;
