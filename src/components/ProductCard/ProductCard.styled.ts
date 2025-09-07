@@ -106,8 +106,8 @@ export const StylesProductCard = styled.div`
   }
 
   .btn span svg {
-    width: 24px;
-    height: 24px;
+    width: 1.4rem;
+    height: 1.5rem;
   }
 
   button {
@@ -116,7 +116,7 @@ export const StylesProductCard = styled.div`
     padding: 0.65rem 1rem;
     width: 100%;
     max-width: 16.875rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     border-radius: 5px;
     border: 1px solid transparent;
