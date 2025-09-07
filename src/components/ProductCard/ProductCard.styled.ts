@@ -45,7 +45,6 @@ export const StylesProductCard = styled.div`
     margin-bottom: 15px;
   }
 
-
   p span {
     color: yellow;
     text-shadow: 1px 1px 1px #555;
@@ -64,14 +63,13 @@ export const StylesProductCard = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-      margin-bottom:5px ;
+    margin-bottom: 5px;
   }
 
   .product-info h3 {
     font-size: 22px;
     font-weight: bold;
     color: #1b9847;
-  
   }
 
   .btn {
@@ -124,8 +122,18 @@ export const StylesProductCard = styled.div`
       font-size: 17px;
     }
 
-    .product-info h3 {
-      font-size: 24px;
+    .product-category {
+      margin-top: 15px;
+    }
+
+    .product-description {
+      gap: 8px;
+    }
+
+    .product-info {
+      margin-top: 15px;
+
+      margin-bottom: 10px;
     }
   }
 `;
