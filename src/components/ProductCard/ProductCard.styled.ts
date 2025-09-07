@@ -123,10 +123,10 @@ export const StylesProductCard = styled.div`
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
   }
 
-  /* @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     .product-card {
       width: 356px;
-      height: 520px;
+      height: 540px;
     }
 
     .product-card img {
@@ -158,5 +158,5 @@ export const StylesProductCard = styled.div`
 
       left: 100px;
     }
-  } */
+  }
 `;
