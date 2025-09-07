@@ -18,7 +18,7 @@ export const StylesCartCards = styled.div`
     background-color: white;
     border-radius: 10px;
     max-width: 350px;
-    max-height: 480px;
+    max-height: 615px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -47,7 +47,7 @@ export const StylesCartCards = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    
   }
   .text svg {
     cursor: pointer;
@@ -133,6 +133,9 @@ export const StylesCartCards = styled.div`
     width: 600px;
   }
 
+  .text{
+    gap:10px;
+  }
   .content-section img{
     flex-direction: column;
     width: 200px;
