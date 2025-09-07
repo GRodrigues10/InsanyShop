@@ -28,7 +28,7 @@ export const StylesProductCard = styled.div`
 
   .product-card img {
     width: 100%;
-    height: 235px;
+    height: 225px;
     object-fit: cover;
     border-radius: 15px;
     border-bottom-left-radius: 0px;
@@ -105,7 +105,7 @@ export const StylesProductCard = styled.div`
   @media screen and (min-width: 1440px) {
     .product-card {
       max-width: 356px;
-      height: 500px;
+      height: 520px;
       font-size: 15.5px;
     }
 
