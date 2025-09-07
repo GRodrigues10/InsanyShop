@@ -38,7 +38,7 @@ export const StylesProductCard = styled.div`
 
   .product-card p,
   .product-card h3 {
-    line-height: 1.45; /* garante espaçamento uniforme */
+    line-height: 1.45;
   }
 
   .product-category {
@@ -105,7 +105,8 @@ export const StylesProductCard = styled.div`
   button {
     background-color: black;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.55rem 1rem;
+    height: 2.6rem;
     width: 100%;
     max-width: 16.875rem;
     font-size: 1rem;
@@ -155,7 +156,7 @@ export const StylesProductCard = styled.div`
     }
     .btn span {
       position: absolute;
-
+      
       left: 100px;
     }
   }
