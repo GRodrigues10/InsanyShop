@@ -116,7 +116,7 @@ export const StylesProductCard = styled.div`
     }
 
     .product-card img {
-      height: 260px;
+      height: 270px;
     }
     button {
       width: 100%;
