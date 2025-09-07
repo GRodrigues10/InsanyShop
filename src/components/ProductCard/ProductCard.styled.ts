@@ -8,12 +8,11 @@ export const StylesProductCard = styled.div`
   .product-card {
     max-width: 310px;
     min-width: 310px;
-    height: 460px;
+    height: 480px;
     border: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     margin-bottom: 10px;
-    font-size: 14px;
     cursor: pointer;
     transition: 0.3s ease;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -45,6 +44,10 @@ export const StylesProductCard = styled.div`
     margin-bottom: 15px;
   }
 
+  .product-category p {
+    font-size: 0.875rem;
+  }
+
   p span {
     color: yellow;
     text-shadow: 1px 1px 1px #555;
@@ -55,6 +58,10 @@ export const StylesProductCard = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5px;
+  }
+
+  .product-description p {
+    font-size: 0.875rem;
   }
 
   .product-info {
@@ -70,6 +77,10 @@ export const StylesProductCard = styled.div`
     font-size: 22px;
     font-weight: bold;
     color: #1b9847;
+  }
+
+  .product-info p {
+    font-size: 0.875rem;
   }
 
   .btn {
@@ -119,7 +130,7 @@ export const StylesProductCard = styled.div`
     button {
       width: 100%;
       max-width: 314px;
-      font-size: 17px;
+      font-size: 1rem;
     }
 
     .product-category {
@@ -127,19 +138,20 @@ export const StylesProductCard = styled.div`
     }
 
     .product-description {
-      gap: 8px;
+      gap: 5px;
     }
 
     .product-info {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
     .product-info h3 {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
+    .btn span {
+      position: absolute;
 
-    .btn button {
-      height: 40px;
+      left: 100px;
     }
   }
 `;
