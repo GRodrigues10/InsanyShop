@@ -47,6 +47,7 @@ export const StylesCartCards = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap:10px;
   }
   .text svg {
     cursor: pointer;
