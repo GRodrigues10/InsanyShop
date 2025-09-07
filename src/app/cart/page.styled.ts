@@ -43,6 +43,7 @@ export const StylesCart = styled.div`
     font-weight: 600;
     font-size: 24px;
     margin-top: 30px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +51,7 @@ export const StylesCart = styled.div`
 
   .cart-products p {
     color: #41414d;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     justify-content: center;

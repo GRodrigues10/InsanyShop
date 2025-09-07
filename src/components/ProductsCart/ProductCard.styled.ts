@@ -6,7 +6,6 @@ export const StylesCartCards = styled.div`
   align-items: center;
   justify-content: center;
 
-
   .content-section {
     width: 100%;
     display: flex;
@@ -26,7 +25,7 @@ export const StylesCartCards = styled.div`
 
     &:hover {
       transform: scale(1.01);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
   }
 
@@ -37,8 +36,8 @@ export const StylesCartCards = styled.div`
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    backface-visibility: hidden; 
-    transform: translateZ(0); 
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .text {
@@ -47,7 +46,7 @@ export const StylesCartCards = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+    color: #41414d;
   }
   .text svg {
     cursor: pointer;
@@ -59,7 +58,6 @@ export const StylesCartCards = styled.div`
   }
   .text h2 {
     font-size: 1.1rem;
-    color: #41414d;
   }
 
   .text .header {
@@ -67,6 +65,10 @@ export const StylesCartCards = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .header h2 {
+    font-weight: normal;
   }
 
   .text .footer {
@@ -101,7 +103,6 @@ export const StylesCartCards = styled.div`
       max-width: 738px;
       max-height: 211px;
       display: flex;
-      
     }
 
     .card-product img {
@@ -128,19 +129,18 @@ export const StylesCartCards = styled.div`
   }
 
   @media screen and (min-width: 992px) {
-  .content-section{
-    flex-direction: column;
-    width: 600px;
-  }
+    .content-section {
+      flex-direction: column;
+      width: 600px;
+    }
 
-  .text{
-    gap:10px;
-  }
-  .content-section img{
-    flex-direction: column;
-    width: 200px;
-  }
-
+    .text {
+      gap: 10px;
+    }
+    .content-section img {
+      flex-direction: column;
+      width: 200px;
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -148,13 +148,11 @@ export const StylesCartCards = styled.div`
     justify-content: center; */
 
     width: 100%;
-  
-    
+
     .content-section {
       width: 100%;
       max-width: 980px;
       align-items: start;
-      
     }
     .card-product {
       width: 760px;
