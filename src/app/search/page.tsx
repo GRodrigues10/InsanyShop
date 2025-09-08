@@ -8,7 +8,13 @@ import { StylesHome } from "../page.styled";
 
 export default function SearchPage() {
   const { term, results, setResults, loading, setLoading } = useSearch();
-
+  const categoryNames: Record<string, string> = {
+    eletronicos: "Eletrônicos",
+    roupas: "Roupas e Calçados",
+    casa: "Casa e Decoração",
+    livros: "Livros",
+    esportes: "Esporte e Lazer",
+  };
   useEffect(() => {
     if (!term) {
       setResults([]);
@@ -39,7 +45,13 @@ export default function SearchPage() {
         ) : results.length > 0 ? (
           <div className="cards">
             {results.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                categoryName={
+                  categoryNames[product.category] || product.category
+                }
+              />
             ))}
           </div>
         ) : (

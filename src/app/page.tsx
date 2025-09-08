@@ -26,7 +26,7 @@ export default function Home() {
     esportes: "Esporte e Lazer",
   };
 
-  // Busca todos os produtos quando a página carrega
+  //  Esse useEffect aqui é responsável por buscar todos os produtos quando a página carrega.
   useEffect(() => {
     const loadProducts = async () => {
       setLoading(true);
@@ -37,7 +37,7 @@ export default function Home() {
     loadProducts();
   }, []);
 
-  // Atualiza os produtos que estão sendo exibidos de acordo com a página do site.
+  // Já esse atualiza os produtos que estão sendo exibidos de acordo com a página do site.
   useEffect(() => {
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;

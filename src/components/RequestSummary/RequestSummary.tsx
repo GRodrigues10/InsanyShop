@@ -4,8 +4,8 @@ import { CartItem } from "@/services/types";
 import { formatPrice } from "@/utils/format";
 
 interface Props {
-  cart: CartItem[]; // recebe o carrinho
-  shippingFee?: number; // frete fixo opcional
+  cart: CartItem[]; 
+  shippingFee?: number; 
 }
 
 function RequestSummary({ cart, shippingFee = 40 }: Props) {
