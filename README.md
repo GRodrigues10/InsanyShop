@@ -52,6 +52,8 @@ Veja o projeto online: https://insany-shop-lirp2ql0l-grodrigues10s-projects.verc
 
 ---
 
+OBS: A contagem de produtos adicionados no carrinho no header só atualiza ao recarregar a página. Além disso, eu queria implementar a funcionalidade de ordenação de produtos, mas por ser opcional e devido ao tempo, não consegui finalizar.
+
 ## Instalação e execução local  
 
 Siga os passos abaixo para rodar o projeto na sua máquina:
