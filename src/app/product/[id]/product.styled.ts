@@ -8,7 +8,6 @@ export const StylesProduct = styled.div`
   align-items: center;
   justify-content: center;
 
-
   .content-section {
     width: 100%;
     display: flex;
@@ -56,7 +55,7 @@ export const StylesProduct = styled.div`
   }
 
   .content-section img {
-  
+    width: 400px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
