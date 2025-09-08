@@ -8,8 +8,9 @@ export const StylesProduct = styled.div`
   align-items: center;
   justify-content: center;
 
+
   .content-section {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,6 +173,7 @@ export const StylesProduct = styled.div`
     button span {
       left: 120px;
     }
+
     .content-section .details {
       gap: 40px;
     }
