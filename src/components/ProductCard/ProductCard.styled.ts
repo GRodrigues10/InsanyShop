@@ -7,8 +7,8 @@ export const StylesProductCard = styled.div`
 
   .product-card {
     width: 310px;
-    min-width: 310px;
-    min-height: 480px;
+    /* min-width: 310px; */
+    height: 480px;
     border: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -142,6 +142,28 @@ export const StylesProductCard = styled.div`
   .btn span svg {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  @media screen and (min-width:992px) {
+     .product-card {
+      width: 300px ;
+      height: 470px ;
+     }
+
+      .product-card img {
+        height: 225px ;
+      }
+  }
+
+    @media screen and (min-width:1200px) {
+     .product-card {
+      width: 310px;
+      height: 480px;
+     }
+
+      .product-card img {
+        height: 235px;
+      }
   }
 
   @media screen and (min-width: 1440px) {
