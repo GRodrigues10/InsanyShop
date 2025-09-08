@@ -17,13 +17,13 @@ export const StylesProduct = styled.div`
     padding: 20px;
   }
 
-  .content{
-  height: 100vh;          
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rebeccapurple;
+  .content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple;
   }
 
   .content-section .details .details-img .btn {
@@ -39,7 +39,7 @@ export const StylesProduct = styled.div`
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid;
-    
+
     padding: 3px;
     transition: 0.4s ease;
     &:hover {
@@ -105,7 +105,7 @@ export const StylesProduct = styled.div`
     max-width: 448px;
   }
 
-  .content-section .details  button {
+  .content-section .details button {
     background-color: black;
     color: white;
     font-weight: normal;
@@ -113,7 +113,7 @@ export const StylesProduct = styled.div`
     width: 100%;
     font-size: 1rem;
     min-height: 2.5rem;
-    margin-top:20px;
+    margin-top: 20px;
     border-radius: 5px;
     border: 1px solid transparent;
     cursor: pointer;
@@ -131,7 +131,7 @@ export const StylesProduct = styled.div`
     }
   }
 
-   button span {
+  button span {
     position: static;
     display: flex;
     align-items: center;
@@ -144,7 +144,6 @@ export const StylesProduct = styled.div`
     position: relative;
     right: 5px;
   }
-
 
   /* button span{
     position: absolute;
@@ -164,19 +163,14 @@ export const StylesProduct = styled.div`
       width: 100%;
       justify-content: center;
       gap: 20px;
-    
     }
 
-     .content-section .details  button {
+    .content-section .details button {
       margin-top: 0px;
-     }
+    }
 
-       button span{
-    
-    left: 120px;
-  }
-    .content-section .btn {
-
+    button span {
+      left: 120px;
     }
     .content-section .details {
       gap: 40px;
@@ -221,11 +215,10 @@ export const StylesProduct = styled.div`
     .content-section .details .details-img .btn svg {
       width: 23px;
     }
-     button span{
-   
-    left: 150px;
-  }
-     .content-section .details .details-img img {
+    button span {
+      left: 150px;
+    }
+    .content-section .details .details-img img {
       bottom: 15px;
       width: 420px;
       height: 400px;
@@ -233,11 +226,8 @@ export const StylesProduct = styled.div`
     .content-section .details .details-text {
       height: 390px;
     }
-    
   }
 
-   
-  
   @media screen and (min-width: 1200px) {
     .content-section .details .details-img .btn {
       position: relative;
@@ -251,8 +241,8 @@ export const StylesProduct = styled.div`
     .content-section .details .details-text .part1 {
       align-self: flex-start;
     }
-    .content-section .details .details-text .part1{
-      h3{
+    .content-section .details .details-text .part1 {
+      h3 {
         font-size: 20px;
       }
     }
@@ -283,5 +273,4 @@ export const StylesProduct = styled.div`
       margin-bottom: 50px;
     }
   }
-
 `;
