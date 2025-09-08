@@ -77,6 +77,8 @@ export const StylesProduct = styled.div`
   }
   .content-section .details .details-text .part1 h1 {
     font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 5px;
   }
 
   .content-section .details .details-text .part1 h3 {
