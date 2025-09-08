@@ -55,7 +55,7 @@ export const StylesProduct = styled.div`
   }
 
   .content-section img {
-    width: 400px;
+    width: 100%;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
