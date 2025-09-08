@@ -9,9 +9,19 @@ interface Props {
 }
 
 function RequestSummary({ cart, shippingFee = 40 }: Props) {
-  const subtotal =(cart || []).reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const subtotal = (cart || []).reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
   const total = subtotal + shippingFee;
-
+  const buy = () => {
+    if (subtotal > 0) {
+      alert("Compra realizada!");
+    }
+    else{
+      alert('Adicione um produto no carrinho!')
+    }
+  };
   return (
     <StylesRequestSummary>
       <div className="content-section">
@@ -35,7 +45,7 @@ function RequestSummary({ cart, shippingFee = 40 }: Props) {
                 <strong>R$ {formatPrice(total)}</strong>
               </p>
             </div>
-            <button>FINALIZAR A COMPRA</button>
+            <button onClick={buy}>FINALIZAR A COMPRA</button>
           </div>
           <div className="footer-summary">
             <p>AJUDA</p>

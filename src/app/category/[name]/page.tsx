@@ -63,7 +63,7 @@ export default function CategoryPage({ params }: { params: { name: string } }) {
             <>
               <div className="cards">
                 {displayProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} categoryName={categoryName}/>
                 ))}
               </div>
 

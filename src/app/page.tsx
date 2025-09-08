@@ -17,6 +17,15 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<Product[]>([]);
 
+  const category: Record<string, string> = {
+    categoria: "categoria",
+    eletronicos: "Eletrônicos",
+    roupas: "Roupas e Calçados",
+    casa: "Casa e Decoração",
+    livros: "Livros",
+    esportes: "Esporte e Lazer",
+  };
+
   // Busca todos os produtos quando a página carrega
   useEffect(() => {
     const loadProducts = async () => {
@@ -59,7 +68,9 @@ export default function Home() {
     <StylesHome>
       <div className="content-section">
         <div className="selects"></div>
-        <h1>{searchTerm ? `Resultados para "${searchTerm}"` : "Todos os Produtos"}</h1>
+        <h1>
+          {searchTerm ? `Resultados para "${searchTerm}"` : "Todos os Produtos"}
+        </h1>
 
         {loading ? (
           <div className="loading-container">
@@ -68,7 +79,11 @@ export default function Home() {
         ) : (
           <div className="cards">
             {displayProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                categoryName={category[product.category] || product.category}
+              />
             ))}
           </div>
         )}
@@ -78,7 +93,8 @@ export default function Home() {
           currentPage={page}
           setPage={setPage}
           totalPages={Math.ceil(
-            (searchTerm ? searchResults.length : allProducts.length) / itemsPerPage
+            (searchTerm ? searchResults.length : allProducts.length) /
+              itemsPerPage
           )}
         />
 

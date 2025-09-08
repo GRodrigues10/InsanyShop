@@ -9,9 +9,10 @@ import { Product } from "@/services/types";
 
 interface Props {
   product: Product;
+   categoryName: string; 
 }
 
-export default function ProductCard({ product }: Props) {
+export default function ProductCard({ product, categoryName }: Props) {
   const router = useRouter();
 
   const details = () => {
@@ -30,7 +31,7 @@ export default function ProductCard({ product }: Props) {
         <div className="product-card" onClick={details}>
           <img src={product.image} alt={product.name} />
           <div className="product-category">
-            <p>{product.category}</p>
+            <p>{categoryName}</p>
             <p>
               <span>★</span> {product.rating}
             </p>

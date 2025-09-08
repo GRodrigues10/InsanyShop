@@ -9,10 +9,19 @@ import { formatPrice } from "@/utils/format";
 import { Product } from "@/services/types";
 import { addToCart } from "@/utils/addCart";
 
+const category: Record<string, string> = {
+  categoria: "categoria",
+  eletronicos: "Eletrônicos",
+  roupas: "Roupas e Calçados",
+  casa: "Casa e Decoração",
+  livros: "Livros",
+  esportes: "Esporte e Lazer",
+};
+
 export default function ProductDetailPage() {
   const { id } = useParams();
   const router = useRouter();
-  const [product, setProduct] = useState<Product| null>(null);
+  const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -20,13 +29,15 @@ export default function ProductDetailPage() {
     }
   }, [id]);
 
-  if (!product) { return <Spinner fullScreen />  }
+  if (!product) {
+    return <Spinner fullScreen />;
+  }
 
   const handleAddToCart = () => {
-  if (!product) return;
-  addToCart(product);
-  alert(`${product.name} adicionado ao carrinho!`);
-};
+    if (!product) return;
+    addToCart(product);
+    alert(`${product.name} adicionado ao carrinho!`);
+  };
 
   return (
     <StylesProduct>
@@ -43,7 +54,7 @@ export default function ProductDetailPage() {
           </div>
           <div className="details-text">
             <div className="part1">
-              <p>{product.category}</p>
+              <p>{category[product.category] || product.category}</p>
               <h1>{product.name}</h1>
               <h3>R$ {formatPrice(product.price)}</h3>
             </div>
