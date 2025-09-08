@@ -59,7 +59,7 @@ Siga os passos abaixo para rodar o projeto na sua máquina:
 git clone https://github.com/seu-usuario/InsanyShop.git
 
 # 2. Acesse a pasta do projeto
-cd insany-shop
+cd insanyShop
 
 # 3. Instale as dependências
 npm install
