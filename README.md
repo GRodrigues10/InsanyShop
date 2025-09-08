@@ -3,6 +3,8 @@
 E-commerce moderno desenvolvido como parte do **desafio da Insany**, utilizando **Next.js, TypeScript, Styled Components**, **LocalStorage** e **API RESTful**.  
 O projeto foi criado com foco em boas práticas, performance e organização de código.  
 
+Veja o projeto online:https://insany-shop-lirp2ql0l-grodrigues10s-projects.vercel.app/
+
 ---
 
 ## Tecnologias  
