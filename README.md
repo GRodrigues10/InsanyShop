@@ -52,7 +52,7 @@ Veja o projeto online: https://insany-shop-ms2k5m92w-grodrigues10s-projects.verc
 
 ---
 
-OBS: A contagem de produtos adicionados no carrinho no header só atualiza ao recarregar a página. Além disso, eu queria implementar a funcionalidade de ordenação de produtos, mas por ser opcional e devido ao tempo, não consegui finalizar.
+OBS: a contagem de produtos adicionados no carrinho no header só atualiza ao recarregar a página. Além disso, eu queria implementar a funcionalidade de ordenação de produtos, mas por ser opcional e devido ao tempo, não consegui finalizar. A versão mais fiel do projeto está na máquina local; a versão no Vercel pode apresentar pequenas diferenças. Para conferir tudo certinho e rodar a versão sem bugs, é só clonar o projeto na máquina.
 
 ## Instalação e execução local  
 
