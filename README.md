@@ -17,9 +17,10 @@ O projeto foi criado com foco em boas práticas, performance e organização de 
 
 ## Funcionalidades  
 
-- Busca de produtos dinâmica  
+- Busca de produtos dinâmica
+- Filtros por categorias de produtos
 - Carrinho de compras com adição/remoção de itens  
-- Persistência de dados no **Local Storage**  
+- Persistência de dados no **LocalStorage**  
 - Cálculo automático do valor total  
 - Layout responsivo com Styled Components  
 - Otimizado para mobile e desktop  
@@ -29,17 +30,23 @@ O projeto foi criado com foco em boas práticas, performance e organização de 
 ## Imagens do Projeto
 
 ### Tela Inicial
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/325bc65a-24aa-4edc-be3d-08096b328ed4" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/1709cdde-0d83-4def-a181-e4753926aa00" />
+
 
 ### Tela de Categoria
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/532dadfc-9265-4aac-8b53-56cd467fb799" />
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/a8de9650-e797-41db-97d0-8bb1584e6f50" />
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/f2bfa18e-3d92-4441-8d36-0f9cdad0098e" />
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/216d59b3-428c-4a47-a60f-bd52fa38e666" />
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/f85e84fc-84ff-4ab0-9046-4673883df633" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/716a70b2-e99a-4f61-8937-f8a89f0a283f" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/766a2b27-b86b-484a-8c4a-0020d7d0bf93" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/2a33a84d-d339-41c2-8439-768ba6f16793" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/83d8468f-aedf-4a6e-b2ca-7a143e6348c2" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/0b955847-e37c-44de-ae63-a3a9c14ba89c" />
+
 
 ### Tela de Busca
-<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/610aaed6-df64-4a80-80f3-3c9813afc6f6" />
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/cd5590b9-565e-44c6-a6f9-3b7e5a45d313" />
+
+
+## Tela co Carrinho de Compras
+<img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/57edf015-1251-4ea9-bc73-1c6c6faadde4" />
 
 ---
 
