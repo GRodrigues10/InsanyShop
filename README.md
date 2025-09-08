@@ -3,7 +3,7 @@
 E-commerce moderno desenvolvido como parte do **desafio da Insany**, utilizando **Next.js, TypeScript, Styled Components**, **LocalStorage** e **API RESTful**.  
 O projeto foi criado com foco em boas práticas, performance e organização de código.  
 
-Veja o projeto online: https://insany-shop-ms2k5m92w-grodrigues10s-projects.vercel.app/
+Veja o projeto online: https://insany-shop-akj5r2mnq-grodrigues10s-projects.vercel.app/
 
 ---
 
@@ -52,7 +52,7 @@ Veja o projeto online: https://insany-shop-ms2k5m92w-grodrigues10s-projects.verc
 
 ---
 
-OBS: a contagem de produtos adicionados no carrinho no header só atualiza ao recarregar a página. Além disso, eu queria implementar a funcionalidade de ordenação de produtos, mas por ser opcional e devido ao tempo, não consegui finalizar. A versão mais fiel do projeto está na máquina local; a versão no Vercel pode apresentar pequenas diferenças. Para conferir tudo certinho e rodar a versão sem bugs, é só clonar o projeto na máquina.
+OBS: a contagem de produtos adicionados no carrinho no header só atualiza ao recarregar a página. Além disso, eu queria implementar a funcionalidade de ordenação de produtos, mas por ser opcional e devido ao tempo, não consegui finalizar. A versão mais fiel do projeto está na máquina local; a versão no Vercel pode apresentar pequenas diferenças.
 
 ## Instalação e execução local  
 
