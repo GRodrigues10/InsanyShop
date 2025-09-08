@@ -89,6 +89,7 @@ export const StylesRequestSummary = styled.div`
     width: 40%;
   }
   @media screen and (min-width: 1200px) {
+     margin-bottom: auto;
     width: 40%;
     max-width: 352px;
     .content-section {

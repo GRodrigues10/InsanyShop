@@ -1,6 +1,6 @@
 # 🛒 InsanyShop  
 
-E-commerce moderno desenvolvido como parte do **desafio da Insany**, utilizando **Next.js, TypeScript, Styled Components**, **Local Storage** e **API RESTful**.  
+E-commerce moderno desenvolvido como parte do **desafio da Insany**, utilizando **Next.js, TypeScript, Styled Components**, **LocalStorage** e **API RESTful**.  
 O projeto foi criado com foco em boas práticas, performance e organização de código.  
 
 ---
@@ -11,7 +11,7 @@ O projeto foi criado com foco em boas práticas, performance e organização de 
 - **TypeScript**
 - **Styled Components**
 - **Lucide Icons**
-- **Local Storage**
+- **LocalStorage**
 
 ---
 

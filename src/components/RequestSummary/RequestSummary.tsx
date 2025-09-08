@@ -1,7 +1,17 @@
 import React from "react";
 import { StylesRequestSummary } from "./RequestSummary.styled";
+import { CartItem } from "@/services/types";
+import { formatPrice } from "@/utils/format";
 
-function RequestSummary() {
+interface Props {
+  cart: CartItem[]; // recebe o carrinho
+  shippingFee?: number; // frete fixo opcional
+}
+
+function RequestSummary({ cart, shippingFee = 40 }: Props) {
+  const subtotal =(cart || []).reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const total = subtotal + shippingFee;
+
   return (
     <StylesRequestSummary>
       <div className="content-section">
@@ -10,11 +20,11 @@ function RequestSummary() {
             <h1>RESUMO DO PEDIDO</h1>
             <div className="total-price">
               <p>Subtotal de produtos</p>
-              <p>R$ 161,00</p>
+              <p>R$ {formatPrice(subtotal)}</p>
             </div>
             <div className="delivery">
               <p>Entrega</p>
-              <p>R$ 40,00</p>
+              <p>R$ {formatPrice(shippingFee)}</p>
             </div>
             <hr />
             <div className="total">
@@ -22,7 +32,7 @@ function RequestSummary() {
                 <strong>Total</strong>
               </p>
               <p>
-                <strong>R$ 201,00</strong>
+                <strong>R$ {formatPrice(total)}</strong>
               </p>
             </div>
             <button>FINALIZAR A COMPRA</button>
@@ -30,7 +40,7 @@ function RequestSummary() {
           <div className="footer-summary">
             <p>AJUDA</p>
             <p>REEMBOLSOS</p>
-            <p>ENTREGAR E FRETE</p>
+            <p>ENTREGA E FRETE</p>
             <p>TROCAS E DEVOLUÇÕES</p>
           </div>
         </div>

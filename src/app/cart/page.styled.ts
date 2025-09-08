@@ -74,7 +74,7 @@ export const StylesCart = styled.div`
   @media screen and (min-width: 768px) {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
 
@@ -98,6 +98,8 @@ export const StylesCart = styled.div`
       align-items: center;
       justify-content: center;
     }
+
+    
   }
 
   @media screen and (min-width: 992px) {
@@ -118,7 +120,6 @@ export const StylesCart = styled.div`
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: row;
     gap: 20px;

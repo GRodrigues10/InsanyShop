@@ -2,9 +2,10 @@
 import { Search, ShoppingBag } from "lucide-react";
 import { StylesHeader } from "./Header.styled";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Product } from "@/services/types";
 import { useSearch } from "@/context/searchContext"; // import do contexto
+import { getCart } from "@/utils/addCart";
 
 function Header() {
   const router = useRouter();
@@ -12,6 +13,7 @@ function Header() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState<Product[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
 
   const fetchData = async () => {
     if (!search) return;
@@ -29,13 +31,19 @@ function Header() {
 
   const handleSearch = () => {
     if (!search) return;
-    setTerm(search); // atualiza o termo no contexto
+    setTerm(search); 
     router.push("/search");
   };
 
   const goToCart = () => {
     router.push("/cart");
   };
+
+  useEffect(() => {
+    const cart = getCart(); 
+    const count = cart.reduce((acc, item) => acc + item.quantity, 0); // soma as quantidades
+    setCartCount(count);
+  }, []);
 
   return (
     <StylesHeader>
@@ -56,7 +64,7 @@ function Header() {
           </div>
           <div className="btn-container">
             <ShoppingBag size={24} className="cart-button" onClick={goToCart} />
-            <span className="circle">2</span>
+            <span className="circle">{cartCount}</span>
           </div>
         </div>
         <div className="header-actions-mobile">

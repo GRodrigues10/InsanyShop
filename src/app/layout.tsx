@@ -5,6 +5,7 @@ import StyledComponentsRegistry from "../lib/registry";
 import Filters from "@/components/Filters/Filters";
 import { url } from "inspector";
 import { SearchProvider } from "@/context/searchContext";
+import { CartProvider } from "@/context/useContext";
 // import { CartProvider } from "../context/useContext";
 
 // Configurando o metadata do site.
@@ -27,11 +28,13 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <SearchProvider>
-            <Header />
+            <CartProvider>
+              <Header />
 
-            <Filters />
+              <Filters />
 
-            {children}
+              {children}
+            </CartProvider>
           </SearchProvider>
         </StyledComponentsRegistry>
       </body>
