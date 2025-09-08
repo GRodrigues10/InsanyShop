@@ -15,7 +15,7 @@ export const StylesProduct = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
+    padding: 40px;
   }
 
   .content {
@@ -56,6 +56,7 @@ export const StylesProduct = styled.div`
   }
 
   .content-section img {
+  
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
@@ -152,6 +153,7 @@ export const StylesProduct = styled.div`
   } */
 
   @media screen and (min-width: 530px) {
+    padding: 20px;
     margin-top: 30px;
   }
 
