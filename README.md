@@ -45,7 +45,7 @@ O projeto foi criado com foco em boas práticas, performance e organização de 
 <img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/cd5590b9-565e-44c6-a6f9-3b7e5a45d313" />
 
 
-## Tela co Carrinho de Compras
+## Tela do Carrinho de Compras
 <img width="100%" height="100%" alt="image" src="https://github.com/user-attachments/assets/57edf015-1251-4ea9-bc73-1c6c6faadde4" />
 
 ---
