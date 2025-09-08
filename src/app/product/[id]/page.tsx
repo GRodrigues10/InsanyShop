@@ -7,6 +7,7 @@ import { fetchProductById } from "@/services/api";
 import Spinner from "@/components/spinnerLoading/Spinner";
 import { formatPrice } from "@/utils/format";
 import { Product } from "@/services/types";
+import { addToCart } from "@/utils/addCart";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
@@ -20,6 +21,12 @@ export default function ProductDetailPage() {
   }, [id]);
 
   if (!product) { return <Spinner fullScreen />  }
+
+  const handleAddToCart = () => {
+  if (!product) return;
+  addToCart(product);
+  alert(`${product.name} adicionado ao carrinho!`);
+};
 
   return (
     <StylesProduct>
@@ -44,7 +51,7 @@ export default function ProductDetailPage() {
               <h3>Descrição</h3>
               <p>{product.description}</p>
             </div>
-            <button>
+            <button onClick={handleAddToCart}>
               <span>
                 <ShoppingCart />
               </span>

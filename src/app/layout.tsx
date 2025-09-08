@@ -8,7 +8,7 @@ import { SearchProvider } from "@/context/searchContext";
 import { CartProvider } from "@/context/useContext";
 // import { CartProvider } from "../context/useContext";
 
-// Configurando o metadata do site.
+// Configurando o metadata do site, dessa forma eu consigo melhorar o SEO.
 export const metadata = {
   title: "InsanyShop 🛒 | E-commerce",
   description:
