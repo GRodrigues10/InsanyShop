@@ -105,28 +105,51 @@ export const StylesProduct = styled.div`
     max-width: 448px;
   }
 
-  .content-section .details button {
-    position: relative;
-    padding: 10px;
-    margin-top: 10px;
+  .content-section .details  button {
     background-color: black;
-    width: 100%;
     color: white;
+    font-weight: normal;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1rem;
+    min-height: 2.5rem;
+    margin-top:20px;
     border-radius: 5px;
-    cursor: pointer;
     border: 1px solid transparent;
-    transition: .4s ease;
-    &:hover{
-        background-color: white;
-        color:black;
-        border: 1px solid;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+      box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
     }
   }
 
-  button span{
+   button span {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button span svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    right: 5px;
+  }
+
+
+  /* button span{
     position: absolute;
     left: 150px;
-  }
+  } */
 
   @media screen and (min-width: 530px) {
     margin-top: 30px;
@@ -143,6 +166,10 @@ export const StylesProduct = styled.div`
       gap: 20px;
     
     }
+
+     .content-section .details  button {
+      margin-top: 0px;
+     }
 
        button span{
     
